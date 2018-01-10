@@ -1,7 +1,6 @@
 const yargs = require('yargs');		
 const axios = require('axios');
 
-//obj that stores the final parse output
 const argv = yargs
 	.options({
 		a: {
@@ -18,13 +17,7 @@ const argv = yargs
 var encodedAddress = encodeURIComponent(argv.address);
 var geocodeUrl = `https://maps.googleapis.com/maps/api/geocode/json?address=${encodedAddress}`;
 
-//.get is an axios method to make http requests
-//don't need to tell if it's JSON or not, it will know automatically
-//.get always returns promise
-//
 axios.get(geocodeUrl).then((response) => {
-	//forcing en error to go directly to .catch()
-	//if we get zero results (user entered wrong address)
 	if (response.data.status === 'ZERO_RESULTS') {
 		throw new Error('Unable to find that address');
 	}
@@ -43,15 +36,12 @@ axios.get(geocodeUrl).then((response) => {
 	if (e.code === 'ENOTFOUND') {
 		console.log('Unable to connect to API servers');
 	} else {
-		//print message from new Error
 		console.log(e.message);
 	}
 });
 
 
-//name of this app?
-//load more information
-//default location?
+
 
 
 
