@@ -1,7 +1,7 @@
 ## Weather App
 Weather application made with Node.js, Google Geolocation API, and Dark Sky weather API.
 
-It takes any address or zipcode an brings back the current temperature, feels like, humidity, rain probability, a summary for the day, and another for the week.
+It takes any address or zipcode an brings back the current temperature, feels like, humidity, rain probability, a summary for the day, and another for the week.	
 
 ## Requirements
 You will only need Node.js installed on your environment.
@@ -20,8 +20,7 @@ Commands
 $ node app.js -help
 ```
 
-2) Getting weather
-You can enter any address or zipcode like this:
+2) Getting weather: enter any address or zipcode like this:
 
 ```
 $ node app.js -a 80222
